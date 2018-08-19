@@ -1,0 +1,470 @@
+{
+  "contractName": "Contract1",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_data",
+          "type": "int256"
+        }
+      ],
+      "name": "GetDouble",
+      "outputs": [
+        {
+          "name": "_output",
+          "type": "int256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060bb8061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636f18a95f146044575b600080fd5b348015604f57600080fd5b50606c600480360381019080803590602001909291905050506082565b6040518082815260200191505060405180910390f35b60006002820290509190505600a165627a7a72305820f07a10a2662f0f886d16810dae82b33ecc693c1e7b5a5fb058295e82ade2baef0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636f18a95f146044575b600080fd5b348015604f57600080fd5b50606c600480360381019080803590602001909291905050506082565b6040518082815260200191505060405180910390f35b60006002820290509190505600a165627a7a72305820f07a10a2662f0f886d16810dae82b33ecc693c1e7b5a5fb058295e82ade2baef0029",
+  "sourceMap": "26:117:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:117:0;;;;;;;",
+  "deployedSourceMap": "26:117:0:-;;;;;;;;;;;;;;;;;;;;;;;;49:90;;8:9:-1;5:2;;;30:1;27;20:12;5:2;49:90:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;100:11;134:1;126:5;:9;119:16;;49:90;;;:::o",
+  "source": "pragma solidity ^0.4.17;\n\ncontract Contract1\n{\n\n\tfunction GetDouble(int _data) pure public returns (int _output) \n\t{\n\t\treturn _data * 2;\n\t}\t\n\n}",
+  "sourcePath": "F:\\Projects\\git\\eth-contracts\\contracts\\Contract1.sol",
+  "ast": {
+    "absolutePath": "/F/Projects/git/eth-contracts/contracts/Contract1.sol",
+    "exportedSymbols": {
+      "Contract1": [
+        14
+      ]
+    },
+    "id": 15,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 14,
+        "linearizedBaseContracts": [
+          14
+        ],
+        "name": "Contract1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 12,
+              "nodeType": "Block",
+              "src": "115:24:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 10,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 8,
+                      "name": "_data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "126:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "32",
+                      "id": 9,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "134:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "126:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "functionReturnParameters": 7,
+                  "id": 11,
+                  "nodeType": "Return",
+                  "src": "119:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 13,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "GetDouble",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13,
+                  "src": "68:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "68:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "67:11:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6,
+                  "name": "_output",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13,
+                  "src": "100:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 5,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "99:13:0"
+            },
+            "scope": 14,
+            "src": "49:90:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 15,
+        "src": "26:117:0"
+      }
+    ],
+    "src": "0:143:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/F/Projects/git/eth-contracts/contracts/Contract1.sol",
+    "exportedSymbols": {
+      "Contract1": [
+        14
+      ]
+    },
+    "id": 15,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 14,
+        "linearizedBaseContracts": [
+          14
+        ],
+        "name": "Contract1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 12,
+              "nodeType": "Block",
+              "src": "115:24:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 10,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 8,
+                      "name": "_data",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "126:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "32",
+                      "id": 9,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "134:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "126:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "functionReturnParameters": 7,
+                  "id": 11,
+                  "nodeType": "Return",
+                  "src": "119:16:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 13,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "GetDouble",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13,
+                  "src": "68:9:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "68:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "67:11:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6,
+                  "name": "_output",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 13,
+                  "src": "100:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 5,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "100:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "99:13:0"
+            },
+            "scope": 14,
+            "src": "49:90:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 15,
+        "src": "26:117:0"
+      }
+    ],
+    "src": "0:143:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "1534503194490": {
+      "events": {},
+      "links": {},
+      "address": "0x89e1433ad65ca2721b95fd8e20bc833db1eba01b",
+      "transactionHash": "0x5d480cad1cadd9b2f373229c29f9a36736f4381a9a8cfb0f6d98bac279ea2439"
+    },
+    "1534508038125": {
+      "events": {},
+      "links": {},
+      "address": "0xb7228d56566d1b9d37f316f15f6eb0d0811c17d8",
+      "transactionHash": "0xdd50a51aecb5c94092390e6a22b3a57d75827609549eebed67edc33a5bcb4693"
+    },
+    "1534508583237": {
+      "events": {},
+      "links": {},
+      "address": "0x4f4b5f5334a27b1de982b3e034e2b46d95906345",
+      "transactionHash": "0x034906cca4373e7f4a8d79aa536c25c03efe771227605d0de47c3d59be99794d"
+    },
+    "1534508649906": {
+      "events": {},
+      "links": {},
+      "address": "0x94fed46e0509a9cad55ccbf8e0600df0ee268fbc",
+      "transactionHash": "0x034906cca4373e7f4a8d79aa536c25c03efe771227605d0de47c3d59be99794d"
+    },
+    "1534508697091": {
+      "events": {},
+      "links": {},
+      "address": "0x658b1f21bf8210067cf3eeaeb3aedd53b6efdd35",
+      "transactionHash": "0x4186855665c0a372ae0bc017e00aed81e6b93a01e0305e6aeadffc994781f52b"
+    },
+    "1534530762444": {
+      "events": {},
+      "links": {},
+      "address": "0xbc53edb0a9cd49000d5996662b1162f43955c87e",
+      "transactionHash": "0x1a4fc092ae3ceb872e052d6e84ab88442cf5d31ddc15136aa9f3eb0a2a43bf03"
+    },
+    "1534531117680": {
+      "events": {},
+      "links": {},
+      "address": "0x5d4f62471bf8eab2b590fa5768eafbb631adc1f6",
+      "transactionHash": "0x9aecefd369b227c64468b2fcec6cf2ed3aee407716b2be3a79f4744c5adc2e92"
+    },
+    "1534663198300": {
+      "events": {},
+      "links": {},
+      "address": "0x719b2951a36fdbaaaf97fee5cf4060a19dbd14d2",
+      "transactionHash": "0xb6e0647354f35683c697592123abf3b83a022d8e545e99323e7ef28ace2995db"
+    },
+    "1534665054954": {
+      "events": {},
+      "links": {},
+      "address": "0x0b0f4a0569434570d3729fbcdb7f07ebb6e04094",
+      "transactionHash": "0x885bac1ff6958e0e15c9ba590817f873a5e18f8ccdb425dd9c98678ead1ff141"
+    },
+    "1534666425674": {
+      "events": {},
+      "links": {},
+      "address": "0xe4db4b8e9f58ff2528edb102f9f0205e3eb53e9d",
+      "transactionHash": "0x034906cca4373e7f4a8d79aa536c25c03efe771227605d0de47c3d59be99794d"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-08-19T08:14:05.615Z"
+}

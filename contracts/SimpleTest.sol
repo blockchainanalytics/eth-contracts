@@ -4,14 +4,17 @@ contract SimpleTest {
     
   string public currentString;
   uint8 public currentInt;
+  uint8 public currentInt2;
 
-  constructor(string cs, uint8 ci) public {
+  constructor(string cs, uint8 ci) public 
+  {
     currentString = cs;
     currentInt = ci;
   }
-  
 
-  function setCurrentData(string cs, uint8 ci) public {
+
+  function setCurrentData(string cs, uint8 ci) public 
+  {
     currentString = cs;
     currentInt = ci;
   }
