@@ -1,0 +1,497 @@
+{
+  "contractName": "OwnableTest",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipRenounced",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "HelloWorld",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610499806100536000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a6146100675780637fffb7bd1461007e5780638da5cb5b1461010e578063f2fde38b14610165575b600080fd5b34801561007357600080fd5b5061007c6101a8565b005b34801561008a57600080fd5b506100936102aa565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d35780820151818401526020810190506100b8565b50505050905090810190601f1680156101005780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561011a57600080fd5b506101236102e7565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017157600080fd5b506101a6600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061030c565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561020357600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60606040805190810160405280600b81526020017f48656c6c6f20576f726c64000000000000000000000000000000000000000000815250905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561036757600080fd5b61037081610373565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156103af57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a7230582078b21a51e481ff97ef31915912b8554ecf0eaa676b45275fac152dd8a597af890029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063715018a6146100675780637fffb7bd1461007e5780638da5cb5b1461010e578063f2fde38b14610165575b600080fd5b34801561007357600080fd5b5061007c6101a8565b005b34801561008a57600080fd5b506100936102aa565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d35780820151818401526020810190506100b8565b50505050905090810190601f1680156101005780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561011a57600080fd5b506101236102e7565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561017157600080fd5b506101a6600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061030c565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561020357600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167ff8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c6482060405160405180910390a260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60606040805190810160405280600b81526020017f48656c6c6f20576f726c64000000000000000000000000000000000000000000815250905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561036757600080fd5b61037081610373565b50565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156103af57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a7230582078b21a51e481ff97ef31915912b8554ecf0eaa676b45275fac152dd8a597af890029",
+  "sourceMap": "107:122:0:-;;;575:10:4;567:5;;:18;;;;;;;;;;;;;;;;;;107:122:0;;;;;;",
+  "deployedSourceMap": "107:122:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1001:111:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1001:111:4;;;;;;143:83:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;143:83:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;143:83:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;238:20:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;238:20:4;;;;;;;;;;;;;;;;;;;;;;;;;;;1274:103;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1274:103:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;1001:111;719:5;;;;;;;;;;;705:19;;:10;:19;;;697:28;;;;;;;;1077:5;;;;;;;;;;;1058:25;;;;;;;;;;;;1105:1;1089:5;;:18;;;;;;;;;;;;;;;;;;1001:111::o;143:83:0:-;186:6;201:20;;;;;;;;;;;;;;;;;;;;143:83;:::o;238:20:4:-;;;;;;;;;;;;;:::o;1274:103::-;719:5;;;;;;;;;;;705:19;;:10;:19;;;697:28;;;;;;;;1343:29;1362:9;1343:18;:29::i;:::-;1274:103;:::o;1512:171::-;1603:1;1582:23;;:9;:23;;;;1574:32;;;;;;;;1645:9;1617:38;;1638:5;;;;;;;;;;;1617:38;;;;;;;;;;;;1669:9;1661:5;;:17;;;;;;;;;;;;;;;;;;1512:171;:::o",
+  "source": "pragma solidity ^0.4.22;\n\nimport \"../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\ncontract OwnableTest is Ownable{\n\n  function HelloWorld() pure public returns (string) {\n    \treturn \"Hello World\";\n  }\n\n}\n\n",
+  "sourcePath": "F:\\Projects\\git\\eth-contracts\\contracts\\OwnableTest.sol",
+  "ast": {
+    "absolutePath": "/F/Projects/git/eth-contracts/contracts/OwnableTest.sol",
+    "exportedSymbols": {
+      "OwnableTest": [
+        13
+      ]
+    },
+    "id": 14,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/F/Projects/git/eth-contracts/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 14,
+        "sourceUnit": 423,
+        "src": "26:79:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 422,
+              "src": "131:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$422",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "131:7:0"
+          }
+        ],
+        "contractDependencies": [
+          422
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13,
+          422
+        ],
+        "name": "OwnableTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "194:32:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48656c6c6f20576f726c64",
+                    "id": 9,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "208:13:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_592fa743889fc7f92ac2a37bb1f5ba1daf2a5c84741ca0e0061d243a2e6707ba",
+                      "typeString": "literal_string \"Hello World\""
+                    },
+                    "value": "Hello World"
+                  },
+                  "functionReturnParameters": 8,
+                  "id": 10,
+                  "nodeType": "Return",
+                  "src": "201:20:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 12,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "HelloWorld",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "186:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:8:0"
+            },
+            "scope": 13,
+            "src": "143:83:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 14,
+        "src": "107:122:0"
+      }
+    ],
+    "src": "0:231:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/F/Projects/git/eth-contracts/contracts/OwnableTest.sol",
+    "exportedSymbols": {
+      "OwnableTest": [
+        13
+      ]
+    },
+    "id": 14,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/F/Projects/git/eth-contracts/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "file": "../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 14,
+        "sourceUnit": 423,
+        "src": "26:79:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 422,
+              "src": "131:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$422",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "131:7:0"
+          }
+        ],
+        "contractDependencies": [
+          422
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13,
+          422
+        ],
+        "name": "OwnableTest",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "194:32:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "48656c6c6f20576f726c64",
+                    "id": 9,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "208:13:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_592fa743889fc7f92ac2a37bb1f5ba1daf2a5c84741ca0e0061d243a2e6707ba",
+                      "typeString": "literal_string \"Hello World\""
+                    },
+                    "value": "Hello World"
+                  },
+                  "functionReturnParameters": 8,
+                  "id": 10,
+                  "nodeType": "Return",
+                  "src": "201:20:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 12,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "HelloWorld",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "186:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:8:0"
+            },
+            "scope": 13,
+            "src": "143:83:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 14,
+        "src": "107:122:0"
+      }
+    ],
+    "src": "0:231:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "1534666425674": {
+      "events": {},
+      "links": {},
+      "address": "0x1ec9d150e4a063db50807e3d07cd72fbd2135a61",
+      "transactionHash": "0xc6f01cc18ff02d6b49691d725c0d9418a7c33abeff9e3534a7dc472409d29de7"
+    },
+    "1535287795452": {
+      "events": {},
+      "links": {},
+      "address": "0x52d42d4b0ca60e69cc54a86a98e21630f136011a",
+      "transactionHash": "0x1c625135cac941a360936ce456fa9a4203da694b1043ba64bc95c0ec7903cc72"
+    },
+    "1535350746597": {
+      "events": {},
+      "links": {},
+      "address": "0x6bc81463ef936600193e6e18e9a6ebf32aee7f50",
+      "transactionHash": "0x6517a3a1edcf4dbe085591e601fe375ed8a73d3ac2bef5ffec05b2d239333bcb"
+    },
+    "1535372727385": {
+      "events": {},
+      "links": {},
+      "address": "0xef010bcc469149e9eb0848dad5b917f619f20b8c",
+      "transactionHash": "0x1c625135cac941a360936ce456fa9a4203da694b1043ba64bc95c0ec7903cc72"
+    },
+    "1535385260954": {
+      "events": {},
+      "links": {},
+      "address": "0x9c01f25ea2c66b8728bfcc4994c105d6ed7302ed",
+      "transactionHash": "0x5484dced846cfec94e3de4cec6a18867160ba6bc0b9f32fd2107f275905c2fb7"
+    },
+    "1535450182393": {
+      "events": {},
+      "links": {},
+      "address": "0xe9ecf74e62ee5d7c059300afea18230350447dba",
+      "transactionHash": "0x68cad093d3c758d94103aa72029403ddf22489de36ddd1c3b9c4ac7f43e27fb4"
+    },
+    "1535700188910": {
+      "events": {},
+      "links": {},
+      "address": "0xfdb61857136b7dab032b63f770a3c99499c4163e",
+      "transactionHash": "0x5484dced846cfec94e3de4cec6a18867160ba6bc0b9f32fd2107f275905c2fb7"
+    },
+    "1535712294720": {
+      "events": {},
+      "links": {},
+      "address": "0x75ad3b5543ef5a2a459869fab62222d10227dc21",
+      "transactionHash": "0x5484dced846cfec94e3de4cec6a18867160ba6bc0b9f32fd2107f275905c2fb7"
+    },
+    "1535715227488": {
+      "events": {},
+      "links": {},
+      "address": "0x074173357ec21dabb65ef47727fd7023fb43cf09",
+      "transactionHash": "0x5484dced846cfec94e3de4cec6a18867160ba6bc0b9f32fd2107f275905c2fb7"
+    },
+    "1536403987090": {
+      "events": {},
+      "links": {},
+      "address": "0xf789117a309bcadf0bb034a8a4a448735e45bc13",
+      "transactionHash": "0x5484dced846cfec94e3de4cec6a18867160ba6bc0b9f32fd2107f275905c2fb7"
+    },
+    "1538541410857": {
+      "events": {},
+      "links": {},
+      "address": "0x043e4300f56278d8a7281ba48e4ce46599c07eee",
+      "transactionHash": "0x114a595ca1f90d1efabdd1dbcde85430858c9390efe9c231364ad19acf7fb969"
+    },
+    "1538560954065": {
+      "events": {},
+      "links": {},
+      "address": "0x3877c5a0c32257011307feb13b224184d097f1c1",
+      "transactionHash": "0x5484dced846cfec94e3de4cec6a18867160ba6bc0b9f32fd2107f275905c2fb7"
+    },
+    "1538562823268": {
+      "events": {},
+      "links": {},
+      "address": "0xfd0bfbdde7abc896161f52a350a520696fcae403",
+      "transactionHash": "0xe9e01de5d1f4e6a46a2df779f5f8bdecf69554a5fe1f60fa562e76f93793e78c"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-10-03T11:10:16.443Z"
+}

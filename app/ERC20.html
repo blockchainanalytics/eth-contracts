@@ -1,0 +1,650 @@
+<html>
+ <head>
+    <title>THis is some thigs</title>
+   
+		
+	<script src="javascripts/jquery.js"></script>
+	<script src="javascripts/web3.js"></script>	
+
+
+<script language="javascript">
+
+		var abi_contract = [
+					    {
+					      "constant": true,
+					      "inputs": [],
+					      "name": "name",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "string"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [
+						{
+						  "name": "_spender",
+						  "type": "address"
+						},
+						{
+						  "name": "_value",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "approve",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "bool"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [],
+					      "name": "totalSupply",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "uint256"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [
+						{
+						  "name": "_from",
+						  "type": "address"
+						},
+						{
+						  "name": "_to",
+						  "type": "address"
+						},
+						{
+						  "name": "_value",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "transferFrom",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "bool"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [],
+					      "name": "INITIAL_SUPPLY",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "uint256"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [],
+					      "name": "decimals",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "uint8"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [],
+					      "name": "withdrawPayments",
+					      "outputs": [],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [
+						{
+						  "name": "_spender",
+						  "type": "address"
+						},
+						{
+						  "name": "_subtractedValue",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "decreaseApproval",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "bool"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [
+						{
+						  "name": "_owner",
+						  "type": "address"
+						}
+					      ],
+					      "name": "balanceOf",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "uint256"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [],
+					      "name": "renounceOwnership",
+					      "outputs": [],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [],
+					      "name": "owner",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "address"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [],
+					      "name": "symbol",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "string"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [
+						{
+						  "name": "_to",
+						  "type": "address"
+						},
+						{
+						  "name": "_value",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "transfer",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "bool"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [
+						{
+						  "name": "_spender",
+						  "type": "address"
+						},
+						{
+						  "name": "_addedValue",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "increaseApproval",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "bool"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [
+						{
+						  "name": "_owner",
+						  "type": "address"
+						},
+						{
+						  "name": "_spender",
+						  "type": "address"
+						}
+					      ],
+					      "name": "allowance",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "uint256"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": true,
+					      "inputs": [
+						{
+						  "name": "_dest",
+						  "type": "address"
+						}
+					      ],
+					      "name": "payments",
+					      "outputs": [
+						{
+						  "name": "",
+						  "type": "uint256"
+						}
+					      ],
+					      "payable": false,
+					      "stateMutability": "view",
+					      "type": "function"
+					    },
+					    {
+					      "constant": false,
+					      "inputs": [
+						{
+						  "name": "_newOwner",
+						  "type": "address"
+						}
+					      ],
+					      "name": "transferOwnership",
+					      "outputs": [],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "function"
+					    },
+					    {
+					      "inputs": [],
+					      "payable": false,
+					      "stateMutability": "nonpayable",
+					      "type": "constructor"
+					    },
+					    {
+					      "anonymous": false,
+					      "inputs": [
+						{
+						  "indexed": true,
+						  "name": "previousOwner",
+						  "type": "address"
+						}
+					      ],
+					      "name": "OwnershipRenounced",
+					      "type": "event"
+					    },
+					    {
+					      "anonymous": false,
+					      "inputs": [
+						{
+						  "indexed": true,
+						  "name": "previousOwner",
+						  "type": "address"
+						},
+						{
+						  "indexed": true,
+						  "name": "newOwner",
+						  "type": "address"
+						}
+					      ],
+					      "name": "OwnershipTransferred",
+					      "type": "event"
+					    },
+					    {
+					      "anonymous": false,
+					      "inputs": [
+						{
+						  "indexed": true,
+						  "name": "owner",
+						  "type": "address"
+						},
+						{
+						  "indexed": true,
+						  "name": "spender",
+						  "type": "address"
+						},
+						{
+						  "indexed": false,
+						  "name": "value",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "Approval",
+					      "type": "event"
+					    },
+					    {
+					      "anonymous": false,
+					      "inputs": [
+						{
+						  "indexed": true,
+						  "name": "from",
+						  "type": "address"
+						},
+						{
+						  "indexed": true,
+						  "name": "to",
+						  "type": "address"
+						},
+						{
+						  "indexed": false,
+						  "name": "value",
+						  "type": "uint256"
+						}
+					      ],
+					      "name": "Transfer",
+					      "type": "event"
+					    }
+				];		
+
+
+
+	
+	let web3 = null;				
+
+	
+
+		  $(document).ready(function(){
+				startApp();
+		  });
+
+	
+	function startApp()
+	{
+		debugger;
+			  
+
+		  var Web3 = require('web3');
+		  // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+		  if (typeof web3 !== 'undefined') {
+				// Use Mist/MetaMask's provider
+				web3 = new Web3(web3.currentProvider);
+		  } else {
+				console.log('No web3? You should consider trying MetaMask!')
+				// fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+				web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+		  }
+		
+		
+		var sampleContract = web3.eth.contract(abi_contract);
+
+		var sampleContractInstance = sampleContract.at("0xe7b4f8730ff1fe7c2b8cb1ac0337789fc2ee89c9");
+
+		sampleContractInstance.name.call( (error, result) => 
+		{ 
+			$("#lbl_Name").html(result);
+		});
+
+
+		sampleContractInstance.symbol.call( (error, result) => 
+		{ 
+			$("#lbl_Symbol").html(result);
+		});
+
+
+		sampleContractInstance.decimals.call( (error, result) => 
+		{ 
+			$("#lbl_Decimals").html(result.toString());
+		});
+
+
+		sampleContractInstance.INITIAL_SUPPLY.call( (error, result) => 
+		{ 
+			$("#lbl_TotalTokens").html(result.toString());
+		});
+
+
+		//alert(web3.eth.accounts[0]);		
+		//web3.eth.defaultAccount = web3.eth.accounts[0];              //this will always return the first account
+
+
+		 // Load account which is set as miner.setEtherbase
+		 web3.eth.getCoinbase(function(err, account) {
+		    if(err === null) {
+				web3.eth.defaultAccount = account;
+				$('#accountAddress').html("Your Account: " + account);
+		    }
+		 })
+				
+				
+				var event = sampleContractInstance.Transfer();
+				event.watch(function(error, result)
+				{
+					if(!error)
+					{
+					    $("#lbl-TransferNotification").html(result.args.value + " coins send to " + result.args.to);
+					}
+					else
+					{
+						alert(error);
+					}
+				}); 
+				
+	
+			
+			web3.eth.getAccounts(function(error, accounts) {
+			      if (!error) {
+				web3.eth.getBalance(accounts[0], function(error, balance) {
+				  if (!error) {
+				    $("#lbl-AccountInfo").html(" Your account: " + accounts[0] + " has " + balance.toNumber() / 1000000000000000000 + "Ether");
+				  } else {
+				    $("#lbl-AccountInfo").html("Some error accessing account info");
+				  }
+				});
+			      } else {
+					$("#lbl-AccountInfo").html("Some error accessing account info");
+			      }
+			});
+
+	
+	}
+	
+
+
+
+
+
+		$("#btn-getAddressToken").click(function()
+		{
+			var fromAddress = $("#txt-getAddressToken").val();
+			sampleContractInstance.balanceOf.call(fromAddress, (error, result) => 
+			{ 
+				$("#lblCurrentBalanceOfAddress").html(result.toString());
+			});		
+		});
+
+
+
+
+
+		
+			$("#btn-TransferToken").click(function() 
+			{
+				var fromAddress = $("#txt-fromAddress").val();
+				var toAddress = $("#txt-ToAddress").val();
+				var amount = $("#txt-Amount").val();
+
+				const transactionObject = {
+				  from: fromAddress,
+				  gas: 2000000,
+				  gasPrice: 4
+				};
+
+				sampleContractInstance.transfer.sendTransaction(toAddress, amount, transactionObject, (error, result)=> 
+				{
+				    
+				});
+			}); 
+
+			
+			
+			
+
+
+
+
+			/*var account = '';
+			var accountInterval = setInterval(function() {
+			  if (web3.eth.accounts[0] !== account) {
+			    account = web3.eth.accounts[0];
+			    alert("account changed : " + account)
+			  }
+			}, 300);*/
+
+
+			
+			
+			
+			
+			$("#btn-SendTransaction").click(function() 
+			{	
+				var fromAddress = $("#txt-SendEtherFromAddress").val();
+				var etherToSend = $("#txt-SendEtherFromAddressAmount").val();
+				
+				//this will send instantly ether to the contract address 
+				//for some reason through this function you cannot send ether to personal address 
+				web3.eth.sendTransaction({from: fromAddress, to: "0x5786d01217187d677324f51dbc0841d24e041509", 
+					value: web3.toWei(etherToSend, "ether"),gas:922000,gasPrice:web3.toWei(45,"Shannon"),data: web3.toHex("ZeroCool")})
+				
+				alert(etherToSend + " ether send");
+			});
+			
+			
+			
+			
+			
+			$("#btn-getBalanceOfAddress").click(function()
+			{
+				var fromAddress = $("#txt-AddressBalance").val();
+
+				web3.eth.getBalance(fromAddress, function (error, result) {
+					if (!error) {
+						 val = result.toString();
+						 
+						 $("#lbl-BalanceOfAddress").html( val/1000000000000000000  )
+					};
+				});
+			});
+
+
+
+			
+		
+
+	
+	
+	
+
+
+</script>
+</head>
+
+
+
+<body>
+
+ 	  <h3>Token Name </h3>         <span id="lbl_Name"></span>	  
+
+ 	  <h3>Token Symbol </h3>       <span id="lbl_Symbol"></span>	  
+
+ 	  <h3>Decimal Places </h3>     <span id="lbl_Decimals"></span>	  
+
+ 	  <h3>Total Token Sypply </h3> <span id="lbl_TotalTokens"></span>
+
+	  <h3>Your Account </h3> <span id="accountAddress"></span>
+
+	  <h3>Your Account Balances </h3> <span id="lbl-AccountInfo"></span>
+
+
+	  
+	  <h3>2. Get Tokens Of Address</h3>
+	  From Address : <input type="text" id="txt-getAddressToken" value="">   <span id="lblCurrentBalanceOfAddress"></span>
+	  <button id="btn-getAddressToken">Get Balance</button>
+
+
+	  <h3>2. Transfer Token</h3>
+	  From Address : <input type="text" id="txt-fromAddress" value=""><br>
+	  To Address : <input type="text" id="txt-ToAddress" value=""><br>
+	  Amount : <input type="text" id="txt-Amount" value="">
+	  <button id="btn-TransferToken">Send Tokens</button> <span id="lbl-TransferNotification"></span>
+	
+
+	  <br><br><br><br>
+	  <h1> Buy Test Tokens </h1>
+	  From Address <input type="text" id="txt-SendEtherFromAddress" />
+	  <br><br>
+	  Ether <input type="text" id="txt-SendEtherFromAddressAmount" />
+	  <br><br>
+	  <button id="btn-SendTransaction">Send </button>
+
+	  
+	  
+	  <br><br><br><br>
+	  <h1> Get balance of </h1>
+	  Address <input type="text" id="txt-AddressBalance" />
+	  <br><br>
+	  <span id="lbl-BalanceOfAddress"> </span>
+	  <br><br>
+	  <button id="btn-getBalanceOfAddress">Send </button>
+	  
+	  
+	  
+	  <br><br><br><br><br><br><br>
+
+</body>
+
+</html>
+
+
+
+
